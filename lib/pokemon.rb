@@ -21,7 +21,7 @@ class Pokemon
     Pokemon.new(:id => a[0], :name => a[1], :type => a[2])
   end
 
-  def alter_hp(hp)
+  def alter_hp(hp, db)
     self.hp = hp
   end
 end
