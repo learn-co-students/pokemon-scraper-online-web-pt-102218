@@ -19,7 +19,7 @@ class Pokemon
   def self.find(id, db)
     ins = db.prepare("SELECT * FROM pokemon WHERE id = ?;")
     found_mon = ins.execute!(id)
-    # binding.prylea
+    # binding.pry
   end
   
   
