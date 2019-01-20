@@ -19,6 +19,14 @@ class Pokemon
   def self.find(id, db)
     ins = db.prepare("SELECT * FROM pokemon WHERE id = ?;")
     found_mon = ins.execute!(id)
+    if found_mon
+      self.new(
+        id: id,
+        name: found_mon[1],
+        type: found_mon[2],
+        db: db
+        )
+    end
     # binding.pry
   end
   
